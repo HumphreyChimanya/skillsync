@@ -1,0 +1,20 @@
+import 'package:shelf/shelf.dart';
+import 'package:shelf_router/shelf_router.dart';
+
+class ApplicationService {
+  Router get router {
+    final router = Router();
+
+    router.post('/apply', (Request request) async {
+      // TODO: apply to a job
+      return Response.ok('Apply to a job');
+    });
+
+    router.get('/status', (Request request) async {
+      // TODO: application status
+      return Response.ok('Application status');
+    });
+
+    return router;
+  }
+}

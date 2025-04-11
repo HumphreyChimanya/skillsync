@@ -1,0 +1,21 @@
+
+import 'package:shelf/shelf.dart';
+import 'package:shelf_router/shelf_router.dart';
+
+class JobService {
+  Router get router {
+    final router = Router();
+
+    router.get('/', (Request request) async {
+      // TODO: list jobs
+      return Response.ok('List of jobs');
+    });
+
+    router.post('/post', (Request request) async {
+      // TODO: post a job
+      return Response.ok('Post a new job');
+    });
+
+    return router;
+  }
+}
